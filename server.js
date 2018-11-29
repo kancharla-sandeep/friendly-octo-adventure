@@ -4,6 +4,8 @@ const hbs = require('hbs');
 
 const fs = require('fs');
 
+const port = process.env.PORT || 8080;
+
 var app = express();
 
 // registerpartials are like components which written can be used at many places
@@ -47,4 +49,4 @@ app.get('/about', (req, res) => {
     });
 })
 
-app.listen(8080);
+app.listen(port);
